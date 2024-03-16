@@ -7,7 +7,7 @@ function getRandomNumber(min, max) {
 }
 
 // Generate random position
-for (i = 0; i < 100; i++) {
+for (i = 0; i < 20; i++) {
   var randomTop = getRandomNumber(0, window.innerHeight); // Adjust 50 to the height of your smiley if different
   var randomLeft = getRandomNumber(0, window.innerWidth); // Adjust 50 to the width of your smiley if different
 
