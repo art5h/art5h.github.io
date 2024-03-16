@@ -1,62 +1,77 @@
-body {
-	margin: 0;
-	padding: 0;
-	font-size: 18px;
-	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-bg-color);
+body{
+	z-index: -1;
+	background-color: #000000;
 }
 
-.container {
-	max-width: 390px;
+head{
+	z-index: 0;
+	filter: opacity(0.2);
+}
+.outer:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+}
+.inner{
+	height: 100px;
+	position: absolute;
+    top: 50%;
+	left: 50%;
+	vertical-align: 0 auto;
+    transform: translateY(-50%) translateX(-50%);
+	
+	border-radius: 40%;
+	width: 60%;
+	color: #ffffff;
+	background-color: #e0e0e0;
+	filter:blur(100px)
 }
 
-.inner {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px;
-}
-
-.img {
-	width: 150px;
-}
-
-.item {
-	text-align: center;
-}
-
+.smiley {
+	opacity: 3%;
+	position: absolute;
+	font-size: 50px; /* Adjust the font size as needed */
+	animation: moveSmiley 5s infinite linear; /* The smiley face will move across the screen in 5 seconds, then repeat */
+  }
+  @keyframes moveSmiley {
+	0% { transform: translateX(0); 
+		opacity: 0;}
+	50% {
+		transform: translateX(45vw); 
+		opacity: 1;
+	}
+	100% { transform: translateX(90vw); 
+		opacity: 0;}
+		} /* The smiley face will move from the left edge of the screen to the right edge */
+  
 .btn {
+	width: 60%;
+	max-width: 2000px;
+	height: 10%;
+	max-height: 100px;
+	position: absolute;
+	transition: all 2.0s;
+    top: 50%;
+    left: 50%;
+	font-size: 40px;
+    transform: translateY(-50%) translateX(-50%);
 	display: inline-block;
 	padding: 10px 20px;
 	border: none;
-	background: rgb(248, 168, 24);
+	background: radial-gradient(rgb(255, 86, 86), rgba(255, 151, 32, 0.993));
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
 	border-radius: 10px;
 	color: #fff;
 	text-transform: uppercase;
-	font-weight: 700;
-
+	font-weight: 20%;
+	width: fit-content;
+	padding: 0px 100px;
 	transition: background .2s linear;
+	animation: button 3s;
 }
-
-.btn:hover {
-	background: lightgreen;
+@keyframes button{
+	0% {opacity: 0}
+	100% {opacity: 100}
 }
-
-.usercard {
-	text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
