@@ -7,7 +7,7 @@ function getRandomNumber(min, max) {
 }
 
 // Generate random position
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 5; i++) {
   var randomTop = getRandomNumber(0, window.innerHeight); // Adjust 50 to the height of your smiley if different
   var randomLeft = getRandomNumber(0, window.innerWidth); // Adjust 50 to the width of your smiley if different
 
@@ -28,8 +28,6 @@ tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
 let item = "";
-
-
-function start(){
-	tg.sendData(1);
-};
+// Get the button element
+// Get the button element
+// var button = document.getElementsByTagName('button')[0];
