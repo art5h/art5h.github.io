@@ -9,15 +9,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Big Button</title>
-
+  
 </head>
+
 <body>
   <div class="inner"></div>
-  <button class="btn" id="btn" onclick="start()">Start</button>
   <div class="outer"></div>
+  <div class="conteiner">
+    <button type="submit" class="btn" id="submit">start</button>
+  </div>
   
+
 </body>
 
-
+<script>
+  document.querySelector('#submit').onclick = function(){
+    var button = document.getElementsByTagName('button')[0];
+    button.style.animation = "button_end 0.3s";
+    button.style.opacity = 0
+  }
+</script>
 
 </html>
