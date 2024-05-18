@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <div id="head">Target Element</div>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="app.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Big Button</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="inner"></div>
-  <div class="outer"></div>
-  <div class="conteiner">
-    <button type="submit" class="btn" id="submit">start</button>
-  </div>
-  
-
+    <div class="container">
+        <header>
+            <h1>Message Board</h1>
+            <p>Write your message and read what others have shared!</p>
+        </header>
+        <main>
+            <section class="message-form">
+                <h2>Write a Message</h2>
+                <form id="messageForm">
+                    <textarea id="messageInput" rows="4" placeholder="Type your message here..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <section class="message-board">
+                <h2>Messages</h2>
+                <div id="messages"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
-
-<script>
-  document.querySelector('#submit').onclick = function(){
-    var button = document.getElementsByTagName('button')[0];
-    button.style.animation = "button_end 0.3s";
-    button.style.opacity = 0
-  }
-</script>
-
 </html>
