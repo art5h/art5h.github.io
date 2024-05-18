@@ -1,88 +1,104 @@
-body{
-	z-index: -1;
-	background-color: #000000;
-	position: fixed;
-    top: var(--st, 0);
-    inline-size: 100%;
-    overflow-y:scroll;
-}
-head{
-	z-index: 0;
-	filter: opacity(0.2);
-}
-.outer:before {
-    display: inline-block;
-    height: 200%;
-    vertical-align: middle;
-    content: "";
-}
-.inner{
-	height: 100px;
-	position: absolute;
-    top: 50%;
-	left: 50%;
-	vertical-align: 0 auto;
-    transform: translateY(500%) translateX(-50%);
-	
-	border-radius: 40%;
-	width: 60%;
-	color: #c02929;
-	background-color: #ffffff;
-	filter:blur(100px)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.smiley {
-	opacity: 3%;
-	position: absolute;
-	font-size: 50px; /* Adjust the font size as needed */
-	animation: moveSmiley 5s infinite linear; /* The smiley face will move across the screen in 5 seconds, then repeat */
-  }
-  @keyframes moveSmiley {
-	0% { transform: translateX(0); 
-		opacity: 0;}
-	50% {
-		transform: translateX(45vw); 
-		opacity: 0.7;
-	}
-	100% { transform: translateX(90vw); 
-		opacity: 0;}
-		} /* The smiley face will move from the left edge of the screen to the right edge */
-  
-.btn {
-	width: 60%;
-	max-width: 2000px;
-	height: 200%;
-	max-height: 100px;
-	position: absolute;
-    top: 50%;
-    left: 50%;
-	font-size: 40px;
-    transform: translateY(500%) translateX(-50%);
-	display: inline-block;
-	padding: 10px 20px;
-	border: none;
-	background: radial-gradient(rgb(255, 86, 86), rgba(255, 151, 32, 0.993));
-	font-family: Arial, Helvetica, sans-serif;
-	font-style: italic;
-	border-radius: 10px;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 20%;
-	width: fit-content;
-	padding: 0px 100px;
-	animation: button 1s;
-}
-@keyframes button{
-	0% {opacity: 0}
-	100% {opacity: 100}
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-@keyframes button_end{
-	0% {opacity: 100}
-	100% {opacity: 0}
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
 }
 
-.type9 {
-	background-color: aqua;
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+header h1 {
+    color: #333333;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: #666666;
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-form,
+.message-board {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-form h2,
+.message-board h2 {
+    color: #555555;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.message-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#messageInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message-board #messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-board .message {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333333;
+}
